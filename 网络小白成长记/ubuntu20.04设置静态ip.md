@@ -4,6 +4,10 @@
 
 # ubuntu20.04设置静态ip
 
+release author: ningan123
+
+release time: 2022-07-16
+
 
 
 ## 需求
