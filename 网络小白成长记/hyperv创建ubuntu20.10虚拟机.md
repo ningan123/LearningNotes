@@ -1,10 +1,14 @@
 
 
-# hyperv创建ubuntu20.10虚拟机
+# hyperv创建ubuntu20.10 ubuntu18.04虚拟机
 
 release author: ningan123
 
 release time: 2022-07-26
+
+
+
+<font color=red>下面以20.10为例： (18.04在后面，只做了部分修改)</font>
 
 
 
@@ -212,7 +216,57 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ groovy-backports
 
 
 
+# ----------------- 2022.08.14 -----------------
 
+
+
+## ubuntu18.04.6
+
+
+
+[ubuntu18.04.6镜像下载](https://releases.ubuntu.com/18.04.6/)
+
+### 成功尝试
+
+指定代数：第一代
+
+启用安全启动：去掉或者不去掉都可以成功
+
+![image-20220814214057058](https://cdn.jsdelivr.net/gh/ningan123/PicGo_Images@main/img/image-20220814214057058.png)
+
+
+
+更换源： 18.04 阿里
+
+```
+deb https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb https://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb https://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+# deb https://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb https://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+```
+
+
+
+
+
+### 失败尝试
+
+指定代数：第二代
+
+启用安全启动：去掉
+
+报错信息：unable to find a medium containing a live file system
 
 
 
